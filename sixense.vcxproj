@@ -71,8 +71,7 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy "$(TargetDir)sixense.dll" "C:\Program Files (x86)\Steam\steamapps\common\Portal 2 Sixense MotionPack\portal2_sixense\bin"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -100,8 +99,7 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>
-      </Command>
+      <Command>copy "$(TargetDir)sixense.dll" "C:\Program Files (x86)\Steam\steamapps\common\Portal 2 Sixense MotionPack\portal2_sixense\bin"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
