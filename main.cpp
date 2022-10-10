@@ -50,7 +50,8 @@ std::deque<compatAllControllerData> g_controller_data;
 void sixenseThreadFunc()
 {
     // We know the sixense SDK thread is running at "60 FPS"
-    auto interval = std::chrono::milliseconds(16);
+    // update at 144Hz anyway
+    auto interval = std::chrono::duration<double, std::ratio<1, 144>>(1);
 
     uint64_t hw_rev = vr::VRSystem()->GetUint64TrackedDeviceProperty(vr::k_unTrackedDeviceIndex_Hmd, vr::Prop_HardwareRevision_Uint64);
     uint64_t fw_rev = vr::VRSystem()->GetUint64TrackedDeviceProperty(vr::k_unTrackedDeviceIndex_Hmd, vr::Prop_FirmwareVersion_Uint64);
